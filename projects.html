@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · Ayoub Tarek</title>
+  <meta name="description" content="Projects by Ayoub Tarek: medical AI, world models, spiking neural networks.">
+
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = "dark"; // dark by default
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html"><strong>Ayoub</strong> Tarek</a>
+      <button class="icon-btn menu-toggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="images/Ayoub_Tarek_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        <li>
+          <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <header class="page-header">
+      <h1 class="page-title"><strong>Projects</strong></h1>
+    </header>
+
+    <!--
+      To add a project: copy one <article class="project-card"> block.
+      Square photos use class="project-thumb"; diagrams use class="project-thumb wide" so they aren't cropped.
+    -->
+    <section class="projects-list">
+
+      <!-- GE HealthCare internship -->
+      <article class="project-card">
+        <a class="project-thumb-link" href="images/projects/ge-uda-architecture.png" target="_blank" rel="noopener"><img class="project-thumb wide" src="images/projects/ge-uda-architecture.png" alt="UDA architecture: shared feature extractor, adversarial and representation heads, redundancy reduction, task head"></a>
+        <div class="project-body">
+          <div class="project-header">
+            <h3 class="project-title">Foundation Models &amp; Unsupervised Domain Adaptation for 2D Probe Pose Estimation</h3>
+            <div class="project-links">
+              <a href="https://github.com/Ayoub-TAREK/Stage-GE-Healthcare-2026" class="badge-link badge-github" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <span class="project-date">May 2026 - August 2026</span>
+          <p class="project-description">
+            Research internship at <strong>GE HealthCare</strong>. Estimating an ultrasound probe's pose from a
+            single X-ray image during heart procedures. Benchmarked foundation models (RAD-DINO, FluoroSAM, DINOv2),
+            then adapted adversarial domain adaptation (FARR) to this regression task.
+          </p>
+        </div>
+      </article>
+
+      <!-- Surgical JEPA -->
+      <article class="project-card">
+        <a class="project-thumb-link" href="images/projects/surgical-jepa.png" target="_blank" rel="noopener"><img class="project-thumb" src="images/projects/surgical-jepa.png" alt="Surgical JEPA world model"></a>
+        <div class="project-body">
+          <div class="project-header">
+            <h3 class="project-title">Surgical JEPA: World Model for Robotic Surgery</h3>
+            <div class="project-links">
+              <a href="https://github.com/Ayoub-TAREK/eb_jepa_hacktheworlds" class="badge-link badge-github" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <span class="project-date">June 2026</span>
+          <p class="project-description">
+            Built at <strong>Hack the Worlds</strong>, a hackathon organized under
+            <a href="https://en.wikipedia.org/wiki/Yann_LeCun" target="_blank" rel="noopener">Yann LeCun</a>.
+            An action-conditioned latent world model (EB-JEPA) that predicts future latent states from
+            wrist-camera video and proprioception on surgical data. Includes ablations on the anti-collapse
+            terms, and a Transformer predictor that reduces autoregressive compounding error.
+          </p>
+        </div>
+      </article>
+
+      <!-- OncoVIA -->
+      <article class="project-card">
+        <a class="project-thumb-link" href="images/projects/oncovia.png" target="_blank" rel="noopener"><img class="project-thumb wide" src="images/projects/oncovia.png" alt="OncoVIA pipeline: DICOM data extraction, retrieval-augmented generation, adapted report generation"></a>
+        <div class="project-body">
+          <div class="project-header">
+            <h3 class="project-title">OncoVIA 🧬: Multimodal Pipeline for Oncology Follow-up</h3>
+            <div class="project-links">
+              <a href="https://github.com/Ayoub-TAREK/OncoVIA" class="badge-link badge-github" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <span class="project-date">February 2026</span>
+          <p class="project-description">
+            🏆 Won 1st place at <strong>Unboxed</strong>, a 30-hour hackathon with GE HealthCare and Mistral AI.
+            Our pipeline reads a CT scan in 3D, segments it, and works out where each tumor is and how big it is.
+            A Mistral agent then pulls the patient's previous reports and writes two follow-ups: one for the
+            radiologist, one the patient can actually read.
+          </p>
+        </div>
+      </article>
+
+      <!-- Drone detection (SNN) -->
+      <article class="project-card">
+        <a class="project-thumb-link" href="images/projects/fred.png" target="_blank" rel="noopener"><img class="project-thumb" src="images/projects/fred.png" alt="FRED dataset sample for drone detection"></a>
+        <div class="project-body">
+          <div class="project-header">
+            <h3 class="project-title">Drone detection using Spiking Neural Networks</h3>
+            <div class="project-links">
+              <a href="https://github.com/Ayoub-TAREK/PDR-detection-de-drone-IMT" class="badge-link badge-github" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="images/projects/drone-detection-snn.pdf" class="badge-link badge-report" target="_blank" rel="noopener">
+                <i class="fa-solid fa-file-lines"></i> Paper
+              </a>
+            </div>
+          </div>
+          <span class="project-date">October 2025 - March 2026</span>
+          <p class="project-description">
+            Wrote a review paper on different ways to detect drones with a focus on spiking neural networks.
+            Fine-tuned several spiking neural network architectures (Spiking YOLOv8, Spiking SSD...)
+            on a fraction of the FRED dataset for drone detection. Achieved 92% mAP with a 69M parameters model.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Ayoub Tarek.</p>
+      <p>Inspired by <a href="https://ahmedloug.github.io/" target="_blank" rel="noopener">ahmedloug.github.io</a> &amp; <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

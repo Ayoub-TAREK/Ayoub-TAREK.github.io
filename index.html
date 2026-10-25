@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayoub Tarek</title>
+  <meta name="description" content="Ayoub Tarek : engineering student at IMT Nord Europe (AI & Data Science), working on AI for medicine and neuroimaging.">
+  <link rel="canonical" href="https://Ayoub-TAREK.github.io/">
+
+  <!-- Set theme before paint to avoid a light/dark flash -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = "dark"; // dark by default
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a class="brand" href="index.html"><strong>Ayoub</strong> Tarek</a>
+      <button class="icon-btn menu-toggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="images/Ayoub_Tarek_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        <li>
+          <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="about-wrapper">
+
+      <!-- Left: profile -->
+      <aside class="profile-col">
+        <img src="images/profile.jpg" alt="Ayoub Tarek as a kid at the computer" class="profile-photo" width="460" height="460">
+        <div class="profile-name">Ayoub Tarek</div>
+        <div class="profile-title">AI for medicine</div>
+        <div class="profile-institution">IMT Nord Europe MSc<br>(graduating summer 2027)</div>
+        <div class="profile-divider"></div>
+        <ul class="profile-social">
+          <li><i class="fa-solid fa-location-dot"></i><span>Paris, France</span></li>
+          <li><a href="mailto:ayoub.tarek022@gmail.com"><i class="fa-solid fa-envelope"></i>Email</a></li>
+          <li><a href="https://www.linkedin.com/in/ayoub-tarek-5283b8320/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+          <li><a href="https://github.com/Ayoub-TAREK" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a></li>
+        </ul>
+      </aside>
+
+      <!-- Right: content -->
+      <div class="about-content">
+
+        <p>
+          I'm an MSc student in AI &amp; Data Science at <a href="https://imt-nord-europe.fr/" target="_blank" rel="noopener">IMT Nord Europe</a>.
+          I'm interested in AI for medicine, and above all the brain: neuroimaging and neurological diseases.
+        </p>
+
+        <ul>
+          <li>
+            At <a href="https://www.gehealthcare.com/" target="_blank" rel="noopener">GE HealthCare</a>, I worked on locating an
+            ultrasound probe in X-ray images during heart procedures, so cardiologists can see both views on one screen.
+            I first benchmarked foundation models for the task, then used unsupervised domain adaptation so the model
+            holds up on real clinical images it was never trained on.
+          </li>
+          <li>
+            With my team, I won 1st place at <strong>Unboxed</strong> (Mistral AI x GE HealthCare) with
+            <a href="projects.html">OncoVIA</a>, and built <a href="projects.html">Surgical JEPA</a>, a surgical world model, at Hack the World(s).
+          </li>
+          <li>
+            Before that, at <a href="https://www.excelya.com/" target="_blank" rel="noopener">Excelya</a>, I built a fully local
+            RAG system to query internal documents, so no data ever leaves the company.
+          </li>
+        </ul>
+
+        <!-- TODO: draft, rewrite in your own voice -->
+        <p>
+          I'm drawn to AI that has to be both accurate and trustworthy, because the end user is a clinician and the
+          stakes are a patient. I'm looking for a 6-month research internship starting between February and March 2027,
+          before a PhD in medical AI. Feel free to reach out!
+        </p>
+
+    <section class="news">
+      <h2>News</h2>
+      <table class="news-table">
+        <tbody>
+          <tr>
+            <th scope="row">Jun 2026</th>
+            <td>
+              Participated in <strong>Hack the World(s)</strong>, a world models hackathon endorsed by
+              <a href="https://en.wikipedia.org/wiki/Yann_LeCun" target="_blank" rel="noopener">Yann LeCun</a>. We built
+              <strong>Surgical JEPA</strong>, an action-conditioned latent world model trained on surgical video.
+              <a href="https://github.com/Ayoub-TAREK/eb_jepa_hacktheworlds" target="_blank" rel="noopener">[Project]</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">May 2026</th>
+            <td>
+              Joined the Interventional Image Processing R&amp;D team at <strong>GE HealthCare</strong> 🫀 as an AI research
+              intern, working with Vincent Jugnon and Gauthier Miralles on X-ray / ultrasound fusion for heart procedures.
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Mar 2026</th>
+            <td>
+              Wrapped up our research project on drone detection with <strong>spiking neural networks</strong>: a review
+              paper, and fine-tuned Spiking YOLOv8 / Spiking SSD reaching 92% mAP on the FRED dataset.
+              <a href="images/projects/drone-detection-snn.pdf" target="_blank" rel="noopener">[Paper]</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Feb 2026</th>
+            <td>
+              🏆 Won "Unboxed", the Mistral AI x GE HealthCare hackathon, where my team and I developed
+              <strong>OncoVIA 🧬</strong>, a multimodal pipeline for oncology (Computer Vision + Agentic RAG) that helps
+              radiologists write accurate, patient-specific follow-up reports.
+              <a href="https://github.com/Ayoub-TAREK/OncoVIA" target="_blank" rel="noopener">[Project]</a>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">May 2025</th>
+            <td>
+              Joined <strong>Excelya</strong> as an AI in healthcare intern. I built a Retrieval-Augmented Generation (RAG)
+              system that answers questions on internal documents with sourced answers, running 100% locally
+              (Mistral 7B, LangChain, FAISS, Streamlit) so confidential data never leaves the company.
+              <a href="https://github.com/Ayoub-TAREK/RAG-project-1" target="_blank" rel="noopener">[Project]</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Ayoub Tarek.</p>
+      <p>Inspired by <a href="https://ahmedloug.github.io/" target="_blank" rel="noopener">ahmedloug.github.io</a> &amp; <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
