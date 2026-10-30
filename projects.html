@@ -52,6 +52,31 @@
     -->
     <section class="projects-list">
 
+      <!-- Brain age across hospitals (independent project) -->
+      <article class="project-card">
+        <a class="project-thumb-link" href="images/projects/brain-age-sites.png" target="_blank" rel="noopener"><img class="project-thumb" src="images/projects/brain-age-sites.png" alt="T1 MRI slices of three 45-year-old subjects from the Guys, HH and IOP hospitals (IXI dataset) after Clinica t1-linear: the IOP image is darker, with less contrast between tissues"></a>
+        <div class="project-body">
+          <div class="project-header">
+            <h3 class="project-title">Brain Age Prediction across Hospitals: Domain Shift with ClinicaDL</h3>
+            <div class="project-links">
+              <a href="https://github.com/Ayoub-TAREK/ixi-brain-age" class="badge-link badge-github" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <span class="project-date">October 2026 - present</span>
+          <p class="project-description">
+            Independent research project with <strong>Clinica</strong> and <strong>ClinicaDL 2.0</strong> on the IXI
+            dataset (563 T1 MRIs from 3 London hospitals). A 3D DenseNet predicts brain age well on the hospitals it
+            was trained on, but its error is 2 to 3 times higher on a hospital it has never seen. Clinica t1-linear
+            preprocessing removes most of the shift for two hospitals (error from 25 to 8.6 years) and contrast
+            augmentation targets the third. Unsupervised domain adaptation (AdaBN, DANN) hurts when the new hospital's
+            patients differ in age (label shift): the stronger the alignment, the larger the error. An age re-weighted variant
+            (IW-DANN) halves the effect. Results are checked with several seeds and control runs.
+          </p>
+        </div>
+      </article>
+
       <!-- GE HealthCare internship -->
       <article class="project-card">
         <a class="project-thumb-link" href="images/projects/ge-uda-architecture.png" target="_blank" rel="noopener"><img class="project-thumb wide" src="images/projects/ge-uda-architecture.png" alt="UDA architecture: shared feature extractor, adversarial and representation heads, redundancy reduction, task head"></a>
